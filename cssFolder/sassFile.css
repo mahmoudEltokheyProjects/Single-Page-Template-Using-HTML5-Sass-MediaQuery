@@ -1,0 +1,449 @@
+@charset "UTF-8";
+/*
+ mixin اي كود بيتكرر كتير او هيتم استخدامه بواسطة اكثر من شخص فهحطه في 
+  transition عشان احط فيها ال  mixin هعرف 
+  @include   functionName ; عن طريق كتابة mixin للدالة او ال include بعمل 
+*/
+.half_width_float, .container .logo, .container ul {
+  width: 50%;
+  float: left; }
+
+.h2, .home .home-content h2, .needSection .needHeader, .serviceSec h2, .downloadSectionClass h2, .getInTouchSecClass h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin: 10px 0;
+  text-transform: capitalize; }
+
+.p, .home .home-content p, .needSection .needPara, .getInTouchSecClass p {
+  margin: 15px 0;
+  /*  
+        letter-spacing:3px عن طريق paragraphعشان اعمل مسافة بين الحروف بتاعت ال 
+        line-height:1.5; عن طريق ال  paragraphعشان وهعمل مسافة بين سطور ال 
+    */
+  line-height: 1.5; }
+
+.span, .home .home-content span, .needSection .needSpan, .serviceSec span, .getInTouchSecClass > span {
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #f05f40;
+  margin: auto; }
+
+.button-primary, .home .home-content button, .needSection .buttonNeed {
+  background-color: #f05f40;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer; }
+  .button-primary:hover, .home .home-content button:hover, .needSection .buttonNeed:hover {
+    background-color: #191b1d;
+    color: #fff;
+    transition: all 0.5s ease-in-out; }
+
+.button-secondary, .downloadSectionClass button {
+  background-color: #191b1d;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer; }
+  .button-secondary:hover, .downloadSectionClass button:hover {
+    background-color: #c9c5bd;
+    color: #191b1d;
+    transition: all 0.5s ease-in-out; }
+
+/*
+ mixin اي كود بيتكرر كتير او هيتم استخدامه بواسطة اكثر من شخص فهحطه في 
+  transition عشان احط فيها ال  mixin هعرف 
+  @include   functionName ; عن طريق كتابة mixin للدالة او ال include بعمل 
+*/
+body {
+  font-family: Merriweather , 'Helvetica Neue',Arial,sans-serif; }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+.half_width_float, .container .logo, .container ul {
+  width: 50%;
+  float: left; }
+
+.h2, .home .home-content h2, .needSection .needHeader, .serviceSec h2, .downloadSectionClass h2, .getInTouchSecClass h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin: 15px 0;
+  text-transform: capitalize; }
+
+.p, .home .home-content p, .needSection .needPara, .getInTouchSecClass p {
+  margin: 15px 0;
+  /*  
+                letter-spacing:3px عن طريق paragraphعشان اعمل مسافة بين الحروف بتاعت ال 
+                line-height:1.5; عن طريق ال  paragraphعشان وهعمل مسافة بين سطور ال 
+            */
+  line-height: 1.5; }
+
+.span, .home .home-content span, .needSection .needSpan, .serviceSec span, .getInTouchSecClass > span {
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #f05f40;
+  margin: auto; }
+
+.button-primary, .home .home-content button, .needSection .buttonNeed {
+  background-color: #f05f40;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 15px;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer; }
+  .button-primary:hover, .home .home-content button:hover, .needSection .buttonNeed:hover {
+    background-color: #191b1d;
+    color: #fff;
+    transition: all 0.5s ease-in-out; }
+
+.button-secondary, .downloadSectionClass button {
+  background-color: #191b1d;
+  color: #fff;
+  padding: 15px 20px;
+  margin-top: 25px;
+  border-radius: 15px;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer; }
+  .button-secondary:hover, .downloadSectionClass button:hover {
+    background-color: #c9c5bd;
+    color: #191b1d;
+    transition: all 0.5s ease-in-out; }
+
+header {
+  background-color: #191b1d;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999; }
+
+.container {
+  width: 85%;
+  margin: auto;
+  overflow: hidden; }
+  .container .logo h2 {
+    color: #c9c5bd;
+    padding: 10px 0; }
+  .container ul {
+    display: flex;
+    list-style: none;
+    padding: 10px 0; }
+    .container ul li {
+      padding: 10px 10px; }
+      .container ul li a {
+        color: #c9c5bd;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: all 0.5s ease-in-out; }
+        .container ul li a:hover {
+          color: #f05f40; }
+
+.home {
+  background: url("../img/homeImage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  /*  position:absolute هيكون ال home-container ففي حالة ال  home بحرية داخل ال  home-container هخلي ال 
+                position:relative يكون home وفي حالة ال 
+            */ }
+  .home .home-content {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 50%); }
+    .home .home-content button {
+      transition: all 0.5s ease-in-out; }
+      .home .home-content button:hover {
+        background-color: #fff;
+        color: #f05f40; }
+
+.needSection {
+  background-color: #f05f40;
+  padding: 5rem 0;
+  text-align: center; }
+  .needSection .needSpan {
+    background-color: #fff; }
+  .needSection .buttonNeed {
+    background-color: #fff;
+    color: #191b1d; }
+
+.serviceSec {
+  padding: 5rem 0;
+  background-color: #fff;
+  text-align: center; }
+  .serviceSec h2 {
+    color: #191b1d; }
+  .serviceSec .service-parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    margin: 3rem 0; }
+    .serviceSec .service-parent i {
+      color: #f05f40; }
+    .serviceSec .service-parent h3 {
+      color: #333;
+      margin: 1rem 0; }
+    .serviceSec .service-parent p {
+      color: #a4a4a4; }
+
+.imageSection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 0; }
+  .imageSection > div 
+    {
+        position: relative; 
+        height: 450px ;
+        border: 1px solid #000 ;
+    }
+    .imageSection > div img 
+    {
+      width: 100%; 
+      height: 100% ;
+    }
+    .imageSection > div:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(240, 95, 64, 0.6);
+      opacity: 0;
+      transition: all 0.5s ease-in-out; }
+    .imageSection > div:hover:after {
+      opacity: 1; }
+
+/*********************************** Download section ************************************ */
+.downloadSectionClass {
+  text-align: center;
+  padding: 5rem 0;
+  background-color: #191b1d; }
+  .downloadSectionClass h2 {
+    text-transform: capitalize; }
+  .downloadSectionClass button {
+    background-color: #f05f40;
+    text-transform: capitalize; }
+
+/*********************************** get In Touch section ************************************ */
+.getInTouchSecClass {
+  text-align: center;
+  padding: 5rem 0;
+  background-color: #fff; }
+  .getInTouchSecClass h2 {
+    color: #5a5d5f;
+    text-transform: capitalize; }
+  .getInTouchSecClass p {
+    color: #a4a4a4; }
+  .getInTouchSecClass .getInTouchSecClassContainer {
+    display: flex;
+    justify-content: center; }
+    .getInTouchSecClass .getInTouchSecClassContainer .icon {
+      margin: 1rem 1.5rem; }
+      .getInTouchSecClass .getInTouchSecClassContainer .icon i {
+        display: block; }
+      .getInTouchSecClass .getInTouchSecClassContainer .icon:last-child span {
+        color: #f05f40; }
+
+/*   @content عن طريق content لذا ال include فهقول له اعمل لي _mixinsFile.scss اللي في ملف ال  @mixin md عايزه ياخذ المحتوي اللي هكتبه هنا ويحطه في ال 
+    mixin لل include فلما اعمل  @mixin xs ,sm , md , lg  هكتب هذه الجملة داخل     
+    @mixin بحيث لما اكتب اي كود هيتم اخذ المحتوي ووضعه في mediaQueryفي ملف ال 
+    @content وهيحطه مكان جملة ال @include بتاع ال block اي كود داخل ال 
+*/
+@media (min-width: 0) and (max-width: 575px) {
+  .half_width_float, .container .logo, .container ul {
+    width: 100%;
+    float: none; }
+  .h2, .home .home-content h2, .needSection .needHeader, .serviceSec h2, .downloadSectionClass h2, .getInTouchSecClass h2 {
+    font-size: 1.6rem;
+    /* 1*(default value Of font-size) */ }
+  header {
+    position: static;
+    text-align: center; }
+    header .container .logo {
+      float: none;
+      width: 100%; }
+    header .container ul {
+      float: none;
+      width: 100%;
+      display: block; }
+  /************************************** service section **********************************/
+  .serviceSec .service-parent {
+    grid-template-columns: repeat(1, 1fr); }
+  .imageSection {
+    grid-template-columns: repeat(1, 1fr); } }
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .half_width_float, .container .logo, .container ul {
+    width: 100%;
+    float: none; }
+  .h2, .home .home-content h2, .needSection .needHeader, .serviceSec h2, .downloadSectionClass h2, .getInTouchSecClass h2 {
+    font-size: 2rem;
+    /* 1.5*(default value Of font-size) */ }
+  .p, .home .home-content p, .needSection .needPara, .getInTouchSecClass p {
+    margin: 5px  0; }
+  header .logo {
+    text-align: center;
+    color: #fff;
+    float: none;
+    width: 100%; }
+  header ul {
+    float: none;
+    width: 100%; }
+  /************************************** service section **********************************/
+  .serviceSec .service-parent {
+    grid-template-columns: repeat(2, 1fr); }
+  .imageSection {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media (min-width: 769px) and (max-width: 1170px) {
+  .h2, .home .home-content h2, .needSection .needHeader, .serviceSec h2, .downloadSectionClass h2, .getInTouchSecClass h2 {
+    font-size: 2rem;
+    /* 1*(default value Of font-size) */ }
+  .imageSection {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media (min-width: 1171px) {
+  .h2, .home .home-content h2, .needSection .needHeader, .serviceSec h2, .downloadSectionClass h2, .getInTouchSecClass h2 {
+    font-size: 3rem;
+    /* 1*(default value Of font-size) */ } }
+
+/*     import في اخر سطر في الملف لان مكان ما بعمل  mediaQuery لملف ال import عمل 
+        import بيجيب الكود بتاع هذا الملف وبيحطه مكان جملة ال 
+        mediaQuery فلما احطها في الاعلي فهيجيب كود ال
+       ويلغي تاثيره mediaQuery علي كود ال override فهينفذه فهيعمل 
+        sass وينفذه بس لما ينزل تحت هيجد كود ال
+*/
+/*   @content عن طريق content لذا ال include فهقول له اعمل لي _mixinsFile.scss اللي في ملف ال  @mixin md عايزه ياخذ المحتوي اللي هكتبه هنا ويحطه في ال 
+    mixin لل include فلما اعمل  @mixin xs ,sm , md , lg  هكتب هذه الجملة داخل     
+    @mixin بحيث لما اكتب اي كود هيتم اخذ المحتوي ووضعه في mediaQueryفي ملف ال 
+    @content وهيحطه مكان جملة ال @include بتاع ال block اي كود داخل ال 
+*/
+@media (min-width: 0) and (max-width: 575px) {
+  .half_width_float, .container .logo, .container ul {
+    width: 100%;
+    float: none; }
+  .h2, .home .home-content h2, .needSection .needHeader, .serviceSec h2, .downloadSectionClass h2, .getInTouchSecClass h2 {
+    font-size: 1.6rem;
+    /* 1*(default value Of font-size) */ }
+  header {
+    position: static;
+    text-align: center; }
+    header .container .logo {
+      float: none;
+      width: 100%; }
+    header .container ul {
+      float: none;
+      width: 100%;
+      display: block; }
+  /************************************** service section **********************************/
+  .serviceSec .service-parent {
+    grid-template-columns: repeat(1, 1fr); }
+  .imageSection {
+    grid-template-columns: repeat(1, 1fr); } }
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .half_width_float, .container .logo, .container ul {
+    width: 100%;
+    float: none; }
+  .h2, .home .home-content h2, .needSection .needHeader, .serviceSec h2, .downloadSectionClass h2, .getInTouchSecClass h2 {
+    font-size: 2rem;
+    /* 1.5*(default value Of font-size) */ }
+  .p, .home .home-content p, .needSection .needPara, .getInTouchSecClass p {
+    margin: 5px  0; }
+  header .logo {
+    text-align: center;
+    color: #fff;
+    float: none;
+    width: 100%; }
+  header ul {
+    float: none;
+    width: 100%; }
+  /************************************** service section **********************************/
+  .serviceSec .service-parent {
+    grid-template-columns: repeat(2, 1fr); }
+  .imageSection {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media (min-width: 769px) and (max-width: 1170px) {
+  .h2, .home .home-content h2, .needSection .needHeader, .serviceSec h2, .downloadSectionClass h2, .getInTouchSecClass h2 {
+    font-size: 2rem;
+    /* 1*(default value Of font-size) */ }
+  .imageSection {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media (min-width: 1171px) {
+  .h2, .home .home-content h2, .needSection .needHeader, .serviceSec h2, .downloadSectionClass h2, .getInTouchSecClass h2 {
+    font-size: 3rem;
+    /* 1*(default value Of font-size) */ } }
+
+/* وهي ال 6 ديفات image section اللي موجود داخل ال direct childعلي الصورة فهعمل ديف وهقول له هات ال overlay يعمل hover عايز لما  
+
+ اكتب هذا الكود بس هيكون طويل after ممكن بدل ما استخدم ال 
+ <section class="imageSection">
+    <div>
+        <img src="img/product5.jpg"alt="product1">
+        <!-- علي الصورة فهعمل ديف overlay يعمل hover عايز لما -->
+        <div class="overlayClass"></div>    
+    </div>
+    <div>
+        <img src="img/product5.jpg"alt="product2">
+        <div class="overlayClass"></div>
+    </div>
+    <div>
+        <img src="img/product5.jpg"alt="product3">
+        <div class="overlayClass"></div>
+    </div>
+    <div>
+        <img src="img/product5.jpg"alt="product4">
+        <div class="overlayClass"></div>
+    </div>
+    <div>
+        <img src="img/product5.jpg"alt="product5">
+        <div class="overlayClass"></div>
+    </div>
+    <div>
+        <img src="img/product5.jpg"alt="product6">
+        <div class="overlayClass"></div>
+    </div>
+</section>
+
+// ده هو الخلفية اللي هتظهر لما احط الفارة علي كل ديف من ال 6 ديفات
+    .overlayClass{
+        position: absolute; //image section يتحرط بحرية بالنسبة لل.overlay عشان اخلي الديف 
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        // هخلي اللون شفاف بس هخلي الشفافية ب 0 طول ما انا محطش الفارة علي المنتج وهتكون ب 1 لو حطيت الفارة عليه 
+        background-color:rgba( $primaryColor,0.6 );  // rgba(yourColor , opacityDegree )لو الشفافية 
+        opacity:0;
+        // to make the animation more smooth 
+        @include transFunc;
+    }
+    // when make over on any product from the 6 product
+    &:hover{   // & == this == .overlayClass عشان اعبر عن العنصر اللي انا موجود بداخله
+        .overlayClass{
+            opacity:1;
+        }
+    }
+}
+/*  وهي ال 6 ديفات image section اللي موجود داخل ال direct childعلي الصورة فهعمل ديف وهقول له هات ال overlay يعمل hover عايز لما  
+*/
